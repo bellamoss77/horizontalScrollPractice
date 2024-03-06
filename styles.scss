@@ -1,26 +1,71 @@
 @import url("https://use.typekit.net/efa7ivj.css");
 
 $sofiaPro: 'sofia-pro', sans-serif;
+$PVCCBergundy: rgba(136, 35, 69, 1);
 
-@keyframes revealText {
-    from {
-        stroke-dashoffset: 1000;
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+body {
+    height: 100%;
+    width: 500%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.intro-container {
+    height: 100vh;
+    width: 100vw;
+    @include flex(column, center, center);
+    background-color: $PVCCBergundy;
+    font-family: $sofiaPro;
+    color: #ddd;
+    h1 {
+        font-size: 5rem;
     }
-    to {
-        stroke-dashoffset: 0;
+    h3 {
+        font-size: 2rem;
+    }
+    span {
+        font-size: 5rem;
     }
 }
 
-#textPath {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: revealText 5s forwards
+.horizontal-slide-container {
+    @include flex(row, space-between, center);
+    flex-wrap: nowrap;
+    width: calc(100vw * 4);
+    height: 100%;
+
+    .horizontal-slide-panel {
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        @include flex(row, space-between, center);
+
+        #quote {
+            position: relative;
+            width: 100vw;
+            height: 100%;
+            @include flex(column, space-around, center);
+
+            .sloan-quote-1 {
+                align-self: flex-start;
+                
+                width: 75vw;
+
+            }
+        }
+    }
 }
 
-.cls-1 {
-    stroke: 3px solid red;
-}
 
 #textGroup {
     transform: translateY(50%);
+
 }
