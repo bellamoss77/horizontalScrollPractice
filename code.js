@@ -130,10 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: '#pencilPath',
-            start: 'left right',
-            end: 'center center',
+            start: 'left center + 20%',
+            end: 'left center',
             containerAnimation: horizontalTween,
-            scrub: 1,
+            scrub: 4,
 
         }
     }); 
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     tl.to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#C',
             align: '#C',
@@ -178,14 +178,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, '0')
       .to('#C', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
        
       }, '0')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#o',
             align: '#o',
@@ -193,13 +193,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#o', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#n',
             align: '#n',
@@ -207,13 +207,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#n', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#t',
             align: '#t',
@@ -221,13 +221,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#t', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#i',
             align: '#i',
@@ -235,13 +235,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#i', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#n2',
             align: '#n2',
@@ -249,13 +249,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#n2', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#u',
             align: '#u',
@@ -263,13 +263,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#u', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#e',
             align: '#e',
@@ -277,13 +277,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, '+=0.2s')
       .to('#e', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#t2',
             align: '#t2',
@@ -291,13 +291,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#t2', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#o2',
             align: '#o2',
@@ -305,13 +305,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, '+=0.2s')
       .to('#o2', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#e2',
             align: '#e2',
@@ -319,13 +319,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#e2', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#s',
             align: '#s',
@@ -333,13 +333,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#s', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#s2',
             align: '#s2',
@@ -347,13 +347,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#s2', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#a',
             align: '#a',
@@ -361,13 +361,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#a', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#y',
             align: '#y',
@@ -375,13 +375,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, '+=0.2s')
       .to('#y', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#g',
             align: '#g',
@@ -389,13 +389,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#g', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#a2',
             align: '#a2',
@@ -403,13 +403,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#a2', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#l',
             align: '#l',
@@ -417,13 +417,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#l', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#l2',
             align: '#l2',
@@ -431,13 +431,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#l2', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#e3',
             align: '#e3',
@@ -445,13 +445,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#e3', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#r',
             align: '#r',
@@ -459,13 +459,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#r', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         motionPath: {
             path: '#y2',
             align: '#y2',
@@ -473,13 +473,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .to('#y2', {
-        duration: 0.5,
+        duration: 1,
         strokeDashoffset: 0,
         opacity: 1,
         ease: 'power1.inOut'
       }, '<')
       .to('#pencilPath', {
-        duration: 0.5,
+        duration: 1,
         y: 20,
         rotation: 220
         })
