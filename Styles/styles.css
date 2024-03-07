@@ -1,10 +1,11 @@
 @import url("https://use.typekit.net/efa7ivj.css");
 body {
   height: 100%;
-  width: 500%;
+  width: 400%;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "sofia-pro", sans-serif;
 }
 
 .intro-container {
@@ -28,36 +29,109 @@ body {
   font-size: 5rem;
 }
 
-.horizontal-slide-container {
+.pin-spacer {
+  z-index: auto;
+  float: none;
+  flex-shrink: 1;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
+  margin: 0px;
+  inset: auto;
+  position: relative;
+  overflow: visible;
+  padding: 0px 0px 0.001px;
+  translate: none;
+  rotate: none;
+}
+
+.horizontal-slide-container {
+  inset: 0px auto auto 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 100vw);
+  grid-auto-rows: 100vh;
   width: 400vw;
   height: 100%;
+  scroll-snap-type: x mandatory;
 }
 .horizontal-slide-container .horizontal-slide-panel {
-  position: relative;
+  background-color: black;
+  color: #ddd;
   width: 100vw;
   height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
 }
-.horizontal-slide-container .horizontal-slide-panel #quote {
-  position: relative;
-  width: 100vw;
+.horizontal-slide-container .horizontal-slide-panel .slide1-img {
+  width: 50vw;
+  height: auto;
+  position: absolute;
+  top: 5%;
+  left: 3%;
+}
+.horizontal-slide-container .horizontal-slide-panel .sloan-quote-1 {
+  width: 45vw;
   height: 100%;
+  line-height: 1.1;
+  font-size: 3rem;
+  font-style: italic;
+  position: absolute;
+  right: 3%;
+}
+.horizontal-slide-container .horizontal-slide-panel .slide2-img {
+  width: 60vh;
+  height: auto;
+  position: absolute;
+  bottom: 25%;
+  left: 60%;
+}
+.horizontal-slide-container .horizontal-slide-panel .sloan-quote-2 {
+  width: 100vh;
+  height: auto;
+  position: absolute;
+  top: 5%;
+  left: 0;
+  font-size: 3rem;
+  font-style: italic;
+  line-height: 1.1;
+}
+.horizontal-slide-container #gratitude {
+  position: relative;
+}
+.horizontal-slide-container #gratitude .grant-recognition {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 75vw;
+  font-size: 3rem;
+  font-style: italic;
+}
+.horizontal-slide-container #gratitude .quote-attribution {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  font-size: 2rem;
+}
+.horizontal-slide-container #continue-to-gallery {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
-.horizontal-slide-container .horizontal-slide-panel #quote .sloan-quote-1 {
-  align-self: flex-start;
-  width: 75vw;
+.horizontal-slide-container #continue-to-gallery svg {
+  margin-left: 20%;
+}
+.horizontal-slide-container #continue-to-gallery span {
+  font-size: 4rem;
+}
+
+#writtenWorks {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 51, 141);
+  color: #ddd;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
 }
 
 #textGroup {

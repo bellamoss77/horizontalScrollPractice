@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(MotionPathPlugin);
 
     const downArrow = document.querySelector('.arrow_down');
+    const downArrowEnd = document.querySelector('.arrow_down_2');
     const rightArrow = document.querySelector('.arrow_right');
     const horizontalSlideContainer = document.querySelector('.horizontal-slide-container');
+    horizontalSlideContainer.removeAttribute('style');
     
-    gsap.to(downArrow, {
+    gsap.to([downArrow, downArrowEnd], {
         y: 25,
         ease: 'power2.inOut',
         yoyo: true,
@@ -14,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })
 
-    gsap.to(horizontalSlideContainer, {
+    let horizontalTween = gsap.to(horizontalSlideContainer, {
         x: () => -(horizontalSlideContainer.scrollWidth - window.innerWidth) + 'px',
         ease: 'none',
         scrollTrigger: {
@@ -26,7 +28,115 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    let tl = gsap.timeline();
+    const slide1Img = document.querySelector('.slide1-img');
+    const slide1Quote = document.querySelector('.sloan-quote-1');
+    const slide2Img = document.querySelector('.slide2-img');
+    const slide2Quote = document.querySelector('.sloan-quote-2');
+    const slide3Quote = document.querySelector('.grant-recognition');
+    const slide3Attribution = document.querySelector('.quote-attribution');
+
+    
+    gsap.from(slide1Img, {
+        opacity: 0,
+        scale: 0,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        scrollTrigger: {
+            trigger: slide1Img,
+            containerAnimation: horizontalTween,
+            start: 'top bottom',
+            toggleActions: 'play reverse play reverse',
+            id: '1'
+        }
+    });
+    gsap.from(slide1Quote, {
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power1.inOut',
+        scrollTrigger: {
+            trigger: slide1Quote,
+            containerAnimation: horizontalTween,
+            start: 'top center',
+            end: 'center center',
+            toggleActions: 'play reverse play reverse',
+            scrub: true,
+            id: '2'
+        }
+    });
+    gsap.from(slide2Quote, {
+        opacity: 0,
+        scale: 0,
+        duration: 0.5,
+        ease: 'power1.inOut',
+        scrollTrigger: {
+            trigger: slide2Quote,
+            containerAnimation: horizontalTween,
+            start: 'left center',
+            end: 'center 20%',
+            toggleActions: 'play reverse play reverse',
+            scrub: true,
+            id: '3'
+        }
+    });
+    gsap.from(slide2Img, {
+        scale: 0,
+        rotation: -360,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        scrollTrigger: {
+            trigger: slide2Img,
+            containerAnimation: horizontalTween,
+            start: 'left 80%',
+            end: 'center center',
+            toggleActions: 'play reverse play reverse',
+            scrub: true,
+            id: '4'
+        }
+    })
+    gsap.from(slide3Quote, {
+        y: -100,
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        scrollTrigger: {
+            trigger: slide3Quote,
+            containerAnimation: horizontalTween,
+            start: 'left 80%',
+            end: 'center center',
+            toggleActions: 'play reverse play reverse',
+            scrub: true,
+            id: '5'
+        }
+    })
+    gsap.from(slide3Attribution, {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        scrollTrigger: {
+            trigger: slide3Attribution,
+            containerAnimation: horizontalTween,
+            start: 'left 80%',
+            end: 'center 80%',
+            toggleActions: 'play reverse play reverse',
+            scrub: true,
+            id: '6'
+        }
+    })
+
+
+
+    
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#pencilPath',
+            start: 'left right',
+            end: 'center center',
+            containerAnimation: horizontalTween,
+            scrub: 1,
+
+        }
+    }); 
 
     const paths = [
         { id: '#C', length: 50.137481689453125 },
@@ -375,3 +485,4 @@ document.addEventListener('DOMContentLoaded', () => {
         })
       })
     
+      
